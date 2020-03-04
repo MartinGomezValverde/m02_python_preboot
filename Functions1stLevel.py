@@ -12,3 +12,4 @@ def addAll(limitTo, f):
     return result
 
 print(addAll(100, normal))
+print(addAll(3, elevated))
