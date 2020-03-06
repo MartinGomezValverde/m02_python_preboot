@@ -5,6 +5,9 @@ def double(x):
 
 lista = [1, 3, -1, 15, 9]
 
+l = lista[:] # Creamos una copia de la lista.
+l.insert(0, 0) # Insertamos en la posición 0, el número netro para que el reduce funcione.
+
 listaDouble = map(lambda x: x*2, lista) #El comando 'map' actúa con 'lambda' para cada ítem de la lista ( hace el doble de cada ítem ).
 listaDouble1 = map(double, lista)
 
@@ -14,4 +17,4 @@ totalSum = reduce(lambda x, y: x + y, lista) #Reduce la lista a un sólo valor d
 
 sum100 = reduce(lambda x, y: x + y, range(101))
 
-sumDoubles = reduce(lambda x, y: x + y*2, lista)
+sumDoubles = reduce(lambda x, y: x + y*2, l)
